@@ -4,6 +4,7 @@ import {AreaPlugin, AreaExtensions} from "rete-area-plugin";
 import {ConnectionPlugin, Presets as ConnectionPresets} from "rete-connection-plugin";
 import {VuePlugin, Presets} from "rete-vue-plugin";
 import type {VueArea2D} from "rete-vue-plugin";
+import { addCustomBackground } from "./Ts/custom-background";
 
 type Schemes = GetSchemes<
     ClassicPreset.Node,
@@ -27,9 +28,13 @@ export async function createEditor(container: HTMLElement) {
 
     connection.addPreset(ConnectionPresets.classic.setup());
 
+    //添加网格背景
+    addCustomBackground(area);
+
     editor.use(area);
     area.use(connection);
     area.use(render);
+
 
     AreaExtensions.simpleNodesOrder(area);
 

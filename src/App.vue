@@ -14,8 +14,11 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-body {
+html, body {
   margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
 }
 .rete {
   width: 100vw;
