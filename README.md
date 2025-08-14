@@ -1,16 +1,26 @@
-# node-graph
+# Node-Graph
 
-This template should help get you started developing with Vue 3 in Vite.
+Vue.js + Electron 桌面应用程序，提供了一个可视化的节点图编辑器。
 
+### 使用框架
+- Rete.js
 
-## Project Setup
+## 使用方法
+
+### 工程初始化
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### 项目构建
 
 ```sh
-npm run dev
+npm run build
+```
+
+### 打包成桌面exe文件
+
+```sh
+npm run electron:build
 ```
